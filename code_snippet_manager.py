@@ -53,7 +53,8 @@ def main():
     add.add_argument('tags', type=str, help='Tags for the new snippet (separate with commas)')
 
     #listing snippets
-
+    list_parser = subparsers.add_parser('list', help='Lists all snippets')
+    list_parser.add_argument('--tag', type=str, help='Filter snippets by a specific tag')
 
     #retrieving a specific snippet
 
