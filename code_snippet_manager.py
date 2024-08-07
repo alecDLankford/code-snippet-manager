@@ -47,8 +47,13 @@ def main():
     subparsers = parser.add_subparsers(dest = 'command')
 
     #adding a new snippet
+    add = subparsers.add_parser('add', help='Add a new code snippet')
+    add.add_argument('title', type=str, help='Title of your new code snippet')
+    add.add_argument('code', type=str, help='Code for the snippet')
+    add.add_argument('tags', type=str, help='Tags for the new snippet (separate with commas)')
 
     #listing snippets
+
 
     #retrieving a specific snippet
 
