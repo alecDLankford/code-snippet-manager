@@ -7,12 +7,12 @@ SNIPPETS_PATH = 'snippets/snippets.json'
 
 def return_snippets():
     if os.path.exists(SNIPPETS_PATH):
-        with open(SNIPPETS_PATH, 'r') as file:
+        with open(SNIPPETS_PATH, 'r', encoding='utf-8') as file:
             return json.load(file)
     return {}
 
 def save_snippets(snippets):
-    with open(SNIPPETS_PATH, 'w') as file:
+    with open(SNIPPETS_PATH, 'w', encoding='utf-8') as file:
         json.dump(snippets, file, indent = 4)
 
 def add_new_snippet(title, code, tags):
