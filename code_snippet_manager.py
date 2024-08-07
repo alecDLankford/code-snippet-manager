@@ -57,6 +57,8 @@ def main():
     list_parser.add_argument('--tag', type=str, help='Filter snippets by a specific tag')
 
     #retrieving a specific snippet
+    retrieve = subparsers.add_parser('rertrieve', help='Retrieve a specific code snippet using its title')
+    retrieve.add_argument('title', type=str, help='Snippets Title')
 
     #deleting a snippet
 
